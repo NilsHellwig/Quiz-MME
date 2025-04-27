@@ -1142,27 +1142,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Quizliste rendern
 function renderQuizList() {
-  quizList.innerHTML = "";
-  QUIZ.forEach((quiz, index) => {
-    const bestKey = `quiz_${quiz.title}_best`;
-    const bestScore = localStorage.getItem(bestKey);
-    const item = document.createElement("li");
-    item.className = "bg-white p-4 rounded-xl shadow hover:bg-gray-50 cursor-pointer flex justify-between items-center";
+    quizList.innerHTML = "";
+    QUIZ.forEach((quiz, index) => {
+        const bestKey = `quiz_${quiz.title}_best`;
+        const bestScore = localStorage.getItem(bestKey);
+        const item = document.createElement("li");
+        item.className = "bg-white p-4 rounded-xl shadow hover:bg-gray-50 cursor-pointer flex justify-between items-center";
 
-    // Always show title
-    let inner = `<span>${quiz.title}</span>`;
+        // Always show title
+        let inner = `<span>${quiz.title}</span>`;
 
-    // Only show best score if it exists in localStorage
-    if (bestScore !== null) {
-      inner += `<div class="text-sm text-white px-2 py-1 rounded-full bg-blue-700">
-                                    Best: ${bestScore} Punkte
-                                </div>`;
-    }
+        // Only show best score if it exists in localStorage
+        if (bestScore !== null) {
+            inner += `
+                <div class="text-sm text-white px-2 py-1 rounded-full bg-blue-700">
+                    Best: ${bestScore} / ${quiz.questions.length} Punkte
+                </div>
+            `;
+        }
 
-    item.innerHTML = inner;
-    item.addEventListener("click", () => startQuiz(index));
-    quizList.appendChild(item);
-  });
+        item.innerHTML = inner;
+        item.addEventListener("click", () => startQuiz(index));
+        quizList.appendChild(item);
+    });
 }
 
 // Quiz starten
