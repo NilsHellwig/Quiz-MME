@@ -277,295 +277,571 @@ const htmlQuiz = {
         { text: '<favicon src="favicon.ico">', correct: false },
         { text: '<meta favicon="favicon.ico">', correct: false },
       ],
+    },
+  ],
+};
+
+const cssQuiz = {
+  title: "Quiz: CSS",
+  availableDate: "2025-04-27",
+  questions: [
+    // Einfache Fragen
+    {
+      question: "Wofür steht CSS?",
+      answers: [
+        { text: "Cascading Style Sheets", correct: true },
+        { text: "Creative Style Sheets", correct: false },
+        { text: "Colorful Style Sheets", correct: false },
+        { text: "Computer Style Sheets", correct: false },
+      ],
+    },
+    {
+      question: "Welche Dateiendung hat eine CSS-Datei?",
+      answers: [
+        { text: ".css", correct: true },
+        { text: ".html", correct: false },
+        { text: ".js", correct: false },
+        { text: ".xml", correct: false },
+      ],
+    },
+    {
+      question: "Welcher Selektor wählt ausschließlich alle <p>-Elemente auf einer Seite aus?",
+      answers: [
+        { text: "p {}", correct: true },
+        { text: "#p {}", correct: false },
+        { text: ".p {}", correct: false },
+        { text: "* {}", correct: false },
+      ],
+    },
+    {
+      question: "Welcher Selektor wählt ein Element mit der ID 'header' aus?",
+      answers: [
+        { text: "#header {}", correct: true },
+        { text: ".header {}", correct: false },
+        { text: "header {}", correct: false },
+        { text: "*[id='header'] {}", correct: false },
+      ],
+    },
+    {
+      question: "Welcher Selektor wählt alle Elemente mit der Klasse 'button' aus?",
+      answers: [
+        { text: ".button {}", correct: true },
+        { text: "#button {}", correct: false },
+        { text: "button {}", correct: false },
+        { text: "*[class='button'] {}", correct: false },
+      ],
+    },
+    {
+      question: "Welcher Selektor wählt alle HTML-Elemente auf einer Seite aus?",
+      answers: [
+        { text: "* {}", correct: true },
+        { text: "all {}", correct: false },
+        { text: ".all {}", correct: false },
+        { text: "#all {}", correct: false },
+      ],
+    },
+    {
+      question: "Welche Eigenschaft wird verwendet, um die Hintergrundfarbe eines Elements zu definieren?",
+      answers: [
+        { text: "background-color", correct: true },
+        { text: "bg-color", correct: false },
+        { text: "color", correct: false },
+        { text: "background", correct: false },
+      ],
+    },
+    {
+      question: "Welche Eigenschaft wird verwendet, um die Schriftgröße eines Elements zu definieren?",
+      answers: [
+        { text: "font-size", correct: true },
+        { text: "text-size", correct: false },
+        { text: "size", correct: false },
+        { text: "font-weight", correct: false },
+      ],
+    },
+    {
+      question: "Welche Eigenschaft wird verwendet, um die horizontale Ausrichtung eines Textes zu definieren?",
+      answers: [
+        { text: "text-align", correct: true },
+        { text: "align-text", correct: false },
+        { text: "text-position", correct: false },
+        { text: "align", correct: false },
+      ],
+    },
+    {
+      question: "Welche Eigenschaft wird verwendet, um den Abstand außerhalb eines Elements zu definieren?",
+      answers: [
+        { text: "margin", correct: true },
+        { text: "padding", correct: false },
+        { text: "border", correct: false },
+        { text: "spacing", correct: false },
+      ],
+    },
+    {
+      question: "Welche Eigenschaft wird verwendet, um den Innenabstand eines Elements zu definieren?",
+      answers: [
+        { text: "padding", correct: true },
+        { text: "margin", correct: false },
+        { text: "inner-spacing", correct: false },
+        { text: "border-spacing", correct: false },
+      ],
+    },
+    {
+      question: "Welche Eigenschaft wird verwendet, um die Breite eines Elements zu definieren?",
+      answers: [
+        { text: "width", correct: true },
+        { text: "size", correct: false },
+        { text: "box-width", correct: false },
+        { text: "element-width", correct: false },
+      ],
+    },
+
+    // Mittlere Fragen
+    {
+      question: "Welche CSS-Einheit ist relativ zur Schriftgröße des Elements?",
+      answers: [
+        { text: "em", correct: true },
+        { text: "px", correct: false },
+        { text: "rem", correct: false },
+        { text: "vw", correct: false },
+      ],
+    },
+    {
+      question: "Welche Eigenschaft wird verwendet, um die Transparenz eines Elements zu definieren?",
+      answers: [
+        { text: "opacity", correct: true },
+        { text: "transparency", correct: false },
+        { text: "alpha", correct: false },
+        { text: "visibility", correct: false },
+      ],
+    },
+    {
+      question: "Welche Eigenschaft wird verwendet, um ein Hintergrundbild zu definieren?",
+      answers: [
+        { text: "background-image", correct: true },
+        { text: "bg-image", correct: false },
+        { text: "image", correct: false },
+        { text: "background-pic", correct: false },
+      ],
+    },
+    {
+      question: "Welche Eigenschaft wird verwendet, um die Wiederholung eines Hintergrundbildes zu steuern?",
+      answers: [
+        { text: "background-repeat", correct: true },
+        { text: "repeat-background", correct: false },
+        { text: "bg-repeat", correct: false },
+        { text: "image-repeat", correct: false },
+      ],
+    },
+    {
+      question: "Welche Eigenschaft wird verwendet, um einen Schatteneffekt zu einem Text hinzuzufügen?",
+      answers: [
+        { text: "text-shadow", correct: true },
+        { text: "shadow-text", correct: false },
+        { text: "text-effect", correct: false },
+        { text: "shadow", correct: false },
+      ],
+    },
+    {
+      question: "Welche Eigenschaft wird verwendet, um einen Schatteneffekt zu einem Element hinzuzufügen?",
+      answers: [
+        { text: "box-shadow", correct: true },
+        { text: "shadow-box", correct: false },
+        { text: "element-shadow", correct: false },
+        { text: "shadow", correct: false },
+      ],
+    },
+    {
+      question: "Welche Eigenschaft wird verwendet, um die Ausrichtung von Flex-Elementen entlang der Hauptachse zu definieren?",
+      answers: [
+        { text: "justify-content", correct: true },
+        { text: "align-content", correct: false },
+        { text: "flex-align", correct: false },
+        { text: "content-justify", correct: false },
+      ],
+    },
+    {
+      question: "Welche Eigenschaft wird verwendet, um die Ausrichtung von Flex-Elementen entlang der Querachse zu definieren?",
+      answers: [
+        { text: "align-items", correct: true },
+        { text: "justify-items", correct: false },
+        { text: "flex-align", correct: false },
+        { text: "items-align", correct: false },
+      ],
+    },
+    {
+      question: "Welche Eigenschaft wird verwendet, um den Abstand zwischen Flex-Elementen zu steuern?",
+      answers: [
+        { text: "gap", correct: true },
+        { text: "spacing", correct: false },
+        { text: "flex-spacing", correct: false },
+        { text: "item-spacing", correct: false },
+      ],
+    },
+    {
+      question: "Welche Eigenschaft wird verwendet, um die Fähigkeit eines Flex-Elements zu definieren, bei Bedarf zu wachsen?",
+      answers: [
+        { text: "flex-grow", correct: true },
+        { text: "grow-flex", correct: false },
+        { text: "flex-expand", correct: false },
+        { text: "expand-flex", correct: false },
+      ],
+    },
+    {
+      question: "Welche Eigenschaft wird verwendet, um die Stapelreihenfolge eines Elements zu definieren?",
+      answers: [
+        { text: "z-index", correct: true },
+        { text: "stack-order", correct: false },
+        { text: "layer-index", correct: false },
+        { text: "index-z", correct: false },
+      ],
+    },
+
+    // Schwierigere Fragen
+    {
+      question: "Welche Eigenschaft wird verwendet, um die Positionierungsmethode eines Elements zu definieren?",
+      answers: [
+        { text: "position", correct: true },
+        { text: "placement", correct: false },
+        { text: "location", correct: false },
+        { text: "positioning", correct: false },
+      ],
+    },
+    {
+      question: "Welcher Wert der Eigenschaft 'position' fixiert ein Element relativ zum Viewport?",
+      answers: [
+        { text: "fixed", correct: true },
+        { text: "static", correct: false },
+        { text: "relative", correct: false },
+        { text: "absolute", correct: false },
+      ],
+    },
+    {
+      question: "Welcher Wert der Eigenschaft 'position' positioniert ein Element relativ zu seinem nächstgelegenen positionierten Vorgänger?",
+      answers: [
+        { text: "absolute", correct: true },
+        { text: "fixed", correct: false },
+        { text: "relative", correct: false },
+        { text: "sticky", correct: false },
+      ],
+    },
+    {
+      question: "Welcher Wert der Eigenschaft 'position' positioniert ein Element basierend auf der Scroll-Position im Browser?",
+      answers: [
+        { text: "sticky", correct: true },
+        { text: "fixed", correct: false },
+        { text: "relative", correct: false },
+        { text: "absolute", correct: false },
+      ],
+    },
+    {
+      question: "Welche Eigenschaft wird verwendet, um die Anzeige eines Elements zu steuern?",
+      answers: [
+        { text: "display", correct: true },
+        { text: "visibility", correct: false },
+        { text: "show", correct: false },
+        { text: "hide", correct: false },
+      ],
+    },
+    {
+      question: "Welcher Wert der Eigenschaft 'display' versteckt ein Element, ohne es aus dem Dokumentfluss zu entfernen?",
+      answers: [
+        { text: "none", correct: true },
+        { text: "hidden", correct: false },
+        { text: "invisible", correct: false },
+        { text: "off", correct: false },
+      ],
+    },
+    {
+      question: "Welche Eigenschaft wird verwendet, um die Richtung des Flexbox-Layouts zu definieren?",
+      answers: [
+        { text: "flex-direction", correct: true },
+        { text: "direction-flex", correct: false },
+        { text: "flex-flow", correct: false },
+        { text: "flow-flex", correct: false },
+      ],
+    },
+  ],
+};
+
+const jsQuiz = {
+  title: "Quiz: JavaScript",
+  availableDate: "2025-04-27",
+  questions: [
+    // Einfache Fragen
+    {
+      question: "Was ist JavaScript?",
+      answers: [
+        { text: "Eine Programmiersprache für die Entwicklung interaktiver Websites", correct: true },
+        { text: "Eine Datenbanktechnologie", correct: false },
+        { text: "Ein Dokument", correct: false },
+        { text: "Eine Desktop-Anwendungssoftware", correct: false },
+      ],
+    },
+    {
+      question: "Wie heißt der offizielle Standard, auf dem JavaScript basiert?",
+      answers: [
+        { text: "JavaScript Standard", correct: false },
+        { text: "ECMAScript", correct: true },
+        { text: "HTMLScript", correct: false },
+        { text: "CSScript", correct: false },
+      ],
+    },
+    {
+      question: "Welche Organisation gibt den ECMAScript-Standard heraus?",
+      answers: [
+        { text: "W3C", correct: false },
+        { text: "ECMA International", correct: true },
+        { text: "IEEE", correct: false },
+        { text: "ISO", correct: false },
+      ],
+    },
+    {
+      question: "Welche Version von ECMAScript ist die aktuellste (Stand 2023)?",
+      answers: [
+        { text: "ECMAScript 2020", correct: false },
+        { text: "ECMAScript 2021", correct: false },
+        { text: "ECMAScript 2022", correct: true },
+        { text: "ECMAScript 2023", correct: false },
+      ],
+    },
+    {
+      question: "Wie kann JavaScript in HTML eingebunden werden?",
+      answers: [
+        { text: "Nur im <head>-Abschnitt", correct: false },
+        { text: "Nur im <body>-Abschnitt", correct: false },
+        { text: "In beiden Abschnitten oder extern über das src-Attribut", correct: true },
+        { text: "Nur extern über das src-Attribut", correct: false },
+      ],
+    },
+    {
+      question: "Was ist der Zweck von Semikolons in JavaScript?",
+      answers: [
+        { text: "Sie sind obligatorisch, um Anweisungen zu trennen", correct: false },
+        { text: "Sie sind optional, aber empfehlenswert, um Fehler zu vermeiden", correct: true },
+        { text: "Sie sind veraltet und sollten nicht verwendet werden", correct: false },
+        { text: "Sie haben keine Bedeutung in JavaScript", correct: false },
+      ],
+    },
+    {
+      question: "Welches Schlüsselwort wird verwendet, um eine Funktion in JavaScript zu definieren?",
+      answers: [
+        { text: "function", correct: true },
+        { text: "def", correct: false },
+        { text: "fun", correct: false },
+        { text: "proc", correct: false },
+      ],
+    },
+    {
+      question: "Was ist der Unterschied zwischen benannten und anonymen Funktionen in JavaScript?",
+      answers: [
+        { text: "Benannte Funktionen haben einen Namen, anonyme Funktionen nicht", correct: true },
+        { text: "Benannte Funktionen sind schneller als anonyme Funktionen", correct: false },
+        { text: "Anonyme Funktionen können keine Parameter akzeptieren", correct: false },
+        { text: "Es gibt keinen Unterschied", correct: false },
+      ],
+    },
+    {
+      question: "Welches Schlüsselwort wird verwendet, um eine Variable in JavaScript zu deklarieren?",
+      answers: [
+        { text: "var", correct: true },
+        { text: "let", correct: false },
+        { text: "const", correct: false },
+        { text: "declare", correct: false },
+      ],
+    },
+    {
+      question: "Welches Schlüsselwort wird verwendet, um eine Block-scoped Variable in JavaScript zu deklarieren?",
+      answers: [
+        { text: "var", correct: false },
+        { text: "let", correct: true },
+        { text: "const", correct: false },
+        { text: "block", correct: false },
+      ],
+    },
+    {
+      question: "Was passiert, wenn eine Variable mit 'let' deklariert wird, aber kein Wert zugewiesen wird?",
+      answers: [
+        { text: "Es wird ein Fehler generiert", correct: true },
+        { text: "Die Variable erhält den Wert 'undefined'", correct: false },
+        { text: "Die Variable wird auf null gesetzt", correct: false },
+        { text: "Die Variable wird ignoriert", correct: false },
+      ],
+    },
+    {
+      question: "Welches Schlüsselwort wird verwendet, um eine Konstante in JavaScript zu deklarieren?",
+      answers: [
+        { text: "var", correct: false },
+        { text: "let", correct: false },
+        { text: "const", correct: true },
+        { text: "final", correct: false },
+      ],
+    },
+    {
+      question: "Kann eine Variable, die mit 'const' deklariert wurde, später neu zugewiesen werden?",
+      answers: [
+        { text: "Ja", correct: false },
+        { text: "Nein", correct: true },
+        { text: "Nur innerhalb einer Funktion", correct: false },
+        { text: "Nur innerhalb eines Blocks", correct: false },
+      ],
+    },
+    {
+      question: "Welcher Operator wird verwendet, um zwei Werte in JavaScript zu addieren?",
+      answers: [
+        { text: "+", correct: true },
+        { text: "-", correct: false },
+        { text: "*", correct: false },
+        { text: "/", correct: false },
+      ],
+    },
+    {
+      question: "Welcher Operator wird verwendet, um den Rest einer Division in JavaScript zu berechnen?",
+      answers: [
+        { text: "%", correct: true },
+        { text: "&", correct: false },
+        { text: "|", correct: false },
+        { text: "^", correct: false },
+      ],
+    },
+    {
+      question: "Welcher Operator wird verwendet, um einen Wert in JavaScript zu inkrementieren?",
+      answers: [
+        { text: "++", correct: true },
+        { text: "--", correct: false },
+        { text: "+=", correct: false },
+        { text: "-=", correct: false },
+      ],
+    },
+    {
+      question: "Welcher Operator wird verwendet, um einen Wert in JavaScript zu dekrementieren?",
+      answers: [
+        { text: "++", correct: false },
+        { text: "--", correct: true },
+        { text: "+=", correct: false },
+        { text: "-=", correct: false },
+      ],
+    },
+    {
+      question: "Welche Methode wird verwendet, um die Länge eines Strings in JavaScript zu ermitteln?",
+      answers: [
+        { text: ".length", correct: true },
+        { text: ".size()", correct: false },
+        { text: ".count()", correct: false },
+        { text: ".length()", correct: false },
+      ],
+    },
+    {
+      question: "Welche Methode wird verwendet, um einen String in Großbuchstaben zu konvertieren?",
+      answers: [
+        { text: ".toUpperCase()", correct: true },
+        { text: ".toLower()", correct: false },
+        { text: ".toUpper()", correct: false },
+        { text: ".upper()", correct: false },
+      ],
+    },
+    {
+      question: "Welche Methode wird verwendet, um einen String in Kleinbuchstaben zu konvertieren?",
+      answers: [
+        { text: ".toLowerCase()", correct: true },
+        { text: ".toLower()", correct: false },
+        { text: ".small()", correct: false },
+        { text: ".lower()", correct: false },
+      ],
+    },
+    {
+      question: "Was ist ein Template Literal in JavaScript?",
+      answers: [
+        { text: "Ein String, der mit Backticks geschrieben wird und eingebettete Ausdrücke enthalten kann", correct: true },
+        { text: "Ein String, der nur Zahlen enthält", correct: false },
+        { text: "Ein String, der nur Buchstaben enthält", correct: false },
+        { text: "Ein String, der nur Sonderzeichen enthält", correct: false },
+      ],
+    },
+    {
+      question: "Welche Methode wird verwendet, um einen String in eine Zahl zu konvertieren?",
+      answers: [
+        { text: "Number()", correct: true },
+        { text: "parseInt()", correct: false },
+        { text: "toNumber()", correct: false },
+        { text: "convertToNumber()", correct: false },
+      ],
+    },
+    {
+      question: "Welche Methode wird verwendet, um eine Zahl in einen String zu konvertieren?",
+      answers: [
+        { text: "String()", correct: true },
+        { text: "toString()", correct: false },
+        { text: "toStr()", correct: false },
+        { text: "convertToString()", correct: false },
+      ],
+    },
+    {
+      question: "Was ist ein JavaScript-Objekt?",
+      answers: [
+        { text: "Eine Sammlung von Schlüssel-Wert-Paaren", correct: true },
+        { text: "Eine Funktion, die eine einzelne Aufgabe ausführt", correct: false },
+        { text: "Ein Array von Werten", correct: false },
+        { text: "Ein Block von Code", correct: false },
+      ],
+    },
+    {
+      question: "Welches Schlüsselwort wird verwendet, um auf das aktuelle Objekt in einer Methode zu verweisen?",
+      answers: [
+        { text: "this", correct: true },
+        { text: "self", correct: false },
+        { text: "object", correct: false },
+        { text: "current", correct: false },
+      ],
+    },
+    {
+      question: "Was ist der Unterschied zwischen '==' und '===' in JavaScript?",
+      answers: [
+        { text: "'==' führt eine Typumwandlung durch, '===' nicht", correct: true },
+        { text: "'===' vergleicht Variablen automatisch als String, '==' nicht", correct: false },
+        { text: "Es gibt keinen Unterschied", correct: false },
+        { text: "'===' führt eine Typumwandlung durch, '==' nicht", correct: false },
+      ],
+    },
+    {
+      question: "Welche Schleife wird verwendet, um über die Eigenschaften eines Objekts zu iterieren?",
+      answers: [
+        { text: "for-in", correct: true },
+        { text: "for-of", correct: false },
+        { text: "forEach", correct: false },
+        { text: "while", correct: false },
+      ],
+    },
+    {
+      question: "Welche Schleife wird verwendet, um über die Werte eines Arrays zu iterieren?",
+      answers: [
+        { text: "for-in", correct: false },
+        { text: "for-of", correct: true },
+        { text: "forEach", correct: false },
+        { text: "while", correct: false },
+      ],
+    },
+    {
+      question: "Welche Methode gibt die Schlüssel eines Objekts zurück?",
+      answers: [
+        { text: "Object.keys()", correct: true },
+        { text: "Object.values()", correct: false },
+        { text: "Object.entries()", correct: false },
+        { text: "Object.items()", correct: false },
+      ],
+    },
+    {
+      question: "Welche Methode gibt die Werte eines Objekts zurück?",
+      answers: [
+        { text: "Object.keys()", correct: false },
+        { text: "Object.values()", correct: true },
+        { text: "Object.entries()", correct: false },
+        { text: "Object.items()", correct: false },
+      ],
     }
   ],
 };
 
-
-const cssQuiz = {
-    title: "Quiz: CSS",
-    availableDate: "2025-04-27",
-    questions: [
-      // Einfache Fragen
-      {
-        question: "Wofür steht CSS?",
-        answers: [
-          { text: "Cascading Style Sheets", correct: true },
-          { text: "Creative Style Sheets", correct: false },
-          { text: "Colorful Style Sheets", correct: false },
-          { text: "Computer Style Sheets", correct: false },
-        ],
-      },
-      {
-        question: "Welche Dateiendung hat eine CSS-Datei?",
-        answers: [
-          { text: ".css", correct: true },
-          { text: ".html", correct: false },
-          { text: ".js", correct: false },
-          { text: ".xml", correct: false },
-        ],
-      },
-      {
-        question: "Welcher Selektor wählt ausschließlich alle <p>-Elemente auf einer Seite aus?",
-        answers: [
-          { text: "p {}", correct: true },
-          { text: "#p {}", correct: false },
-          { text: ".p {}", correct: false },
-          { text: "* {}", correct: false },
-        ],
-      },
-      {
-        question: "Welcher Selektor wählt ein Element mit der ID 'header' aus?",
-        answers: [
-          { text: "#header {}", correct: true },
-          { text: ".header {}", correct: false },
-          { text: "header {}", correct: false },
-          { text: "*[id='header'] {}", correct: false },
-        ],
-      },
-      {
-        question: "Welcher Selektor wählt alle Elemente mit der Klasse 'button' aus?",
-        answers: [
-          { text: ".button {}", correct: true },
-          { text: "#button {}", correct: false },
-          { text: "button {}", correct: false },
-          { text: "*[class='button'] {}", correct: false },
-        ],
-      },
-      {
-        question: "Welcher Selektor wählt alle HTML-Elemente auf einer Seite aus?",
-        answers: [
-          { text: "* {}", correct: true },
-          { text: "all {}", correct: false },
-          { text: ".all {}", correct: false },
-          { text: "#all {}", correct: false },
-        ],
-      },
-      {
-        question: "Welche Eigenschaft wird verwendet, um die Hintergrundfarbe eines Elements zu definieren?",
-        answers: [
-          { text: "background-color", correct: true },
-          { text: "bg-color", correct: false },
-          { text: "color", correct: false },
-          { text: "background", correct: false },
-        ],
-      },
-      {
-        question: "Welche Eigenschaft wird verwendet, um die Schriftgröße eines Elements zu definieren?",
-        answers: [
-          { text: "font-size", correct: true },
-          { text: "text-size", correct: false },
-          { text: "size", correct: false },
-          { text: "font-weight", correct: false },
-        ],
-      },
-      {
-        question: "Welche Eigenschaft wird verwendet, um die horizontale Ausrichtung eines Textes zu definieren?",
-        answers: [
-          { text: "text-align", correct: true },
-          { text: "align-text", correct: false },
-          { text: "text-position", correct: false },
-          { text: "align", correct: false },
-        ],
-      },
-      {
-        question: "Welche Eigenschaft wird verwendet, um den Abstand außerhalb eines Elements zu definieren?",
-        answers: [
-          { text: "margin", correct: true },
-          { text: "padding", correct: false },
-          { text: "border", correct: false },
-          { text: "spacing", correct: false },
-        ],
-      },
-      {
-        question: "Welche Eigenschaft wird verwendet, um den Innenabstand eines Elements zu definieren?",
-        answers: [
-          { text: "padding", correct: true },
-          { text: "margin", correct: false },
-          { text: "inner-spacing", correct: false },
-          { text: "border-spacing", correct: false },
-        ],
-      },
-      {
-        question: "Welche Eigenschaft wird verwendet, um die Breite eines Elements zu definieren?",
-        answers: [
-          { text: "width", correct: true },
-          { text: "size", correct: false },
-          { text: "box-width", correct: false },
-          { text: "element-width", correct: false },
-        ],
-      },
-  
-      // Mittlere Fragen
-      {
-        question: "Welche CSS-Einheit ist relativ zur Schriftgröße des Elements?",
-        answers: [
-          { text: "em", correct: true },
-          { text: "px", correct: false },
-          { text: "rem", correct: false },
-          { text: "vw", correct: false },
-        ],
-      },
-      {
-        question: "Welche Eigenschaft wird verwendet, um die Transparenz eines Elements zu definieren?",
-        answers: [
-          { text: "opacity", correct: true },
-          { text: "transparency", correct: false },
-          { text: "alpha", correct: false },
-          { text: "visibility", correct: false },
-        ],
-      },
-      {
-        question: "Welche Eigenschaft wird verwendet, um ein Hintergrundbild zu definieren?",
-        answers: [
-          { text: "background-image", correct: true },
-          { text: "bg-image", correct: false },
-          { text: "image", correct: false },
-          { text: "background-pic", correct: false },
-        ],
-      },
-      {
-        question: "Welche Eigenschaft wird verwendet, um die Wiederholung eines Hintergrundbildes zu steuern?",
-        answers: [
-          { text: "background-repeat", correct: true },
-          { text: "repeat-background", correct: false },
-          { text: "bg-repeat", correct: false },
-          { text: "image-repeat", correct: false },
-        ],
-      },
-      {
-        question: "Welche Eigenschaft wird verwendet, um einen Schatteneffekt zu einem Text hinzuzufügen?",
-        answers: [
-          { text: "text-shadow", correct: true },
-          { text: "shadow-text", correct: false },
-          { text: "text-effect", correct: false },
-          { text: "shadow", correct: false },
-        ],
-      },
-      {
-        question: "Welche Eigenschaft wird verwendet, um einen Schatteneffekt zu einem Element hinzuzufügen?",
-        answers: [
-          { text: "box-shadow", correct: true },
-          { text: "shadow-box", correct: false },
-          { text: "element-shadow", correct: false },
-          { text: "shadow", correct: false },
-        ],
-      },
-      {
-        question: "Welche Eigenschaft wird verwendet, um die Ausrichtung von Flex-Elementen entlang der Hauptachse zu definieren?",
-        answers: [
-          { text: "justify-content", correct: true },
-          { text: "align-content", correct: false },
-          { text: "flex-align", correct: false },
-          { text: "content-justify", correct: false },
-        ],
-      },
-      {
-        question: "Welche Eigenschaft wird verwendet, um die Ausrichtung von Flex-Elementen entlang der Querachse zu definieren?",
-        answers: [
-          { text: "align-items", correct: true },
-          { text: "justify-items", correct: false },
-          { text: "flex-align", correct: false },
-          { text: "items-align", correct: false },
-        ],
-      },
-      {
-        question: "Welche Eigenschaft wird verwendet, um den Abstand zwischen Flex-Elementen zu steuern?",
-        answers: [
-          { text: "gap", correct: true },
-          { text: "spacing", correct: false },
-          { text: "flex-spacing", correct: false },
-          { text: "item-spacing", correct: false },
-        ],
-      },
-      {
-        question: "Welche Eigenschaft wird verwendet, um die Fähigkeit eines Flex-Elements zu definieren, bei Bedarf zu wachsen?",
-        answers: [
-          { text: "flex-grow", correct: true },
-          { text: "grow-flex", correct: false },
-          { text: "flex-expand", correct: false },
-          { text: "expand-flex", correct: false },
-        ],
-      },
-      {
-        question: "Welche Eigenschaft wird verwendet, um die Stapelreihenfolge eines Elements zu definieren?",
-        answers: [
-          { text: "z-index", correct: true },
-          { text: "stack-order", correct: false },
-          { text: "layer-index", correct: false },
-          { text: "index-z", correct: false },
-        ],
-      },
-  
-      // Schwierigere Fragen
-      {
-        question: "Welche Eigenschaft wird verwendet, um die Positionierungsmethode eines Elements zu definieren?",
-        answers: [
-          { text: "position", correct: true },
-          { text: "placement", correct: false },
-          { text: "location", correct: false },
-          { text: "positioning", correct: false },
-        ],
-      },
-      {
-        question: "Welcher Wert der Eigenschaft 'position' fixiert ein Element relativ zum Viewport?",
-        answers: [
-          { text: "fixed", correct: true },
-          { text: "static", correct: false },
-          { text: "relative", correct: false },
-          { text: "absolute", correct: false },
-        ],
-      },
-      {
-        question: "Welcher Wert der Eigenschaft 'position' positioniert ein Element relativ zu seinem nächstgelegenen positionierten Vorgänger?",
-        answers: [
-          { text: "absolute", correct: true },
-          { text: "fixed", correct: false },
-          { text: "relative", correct: false },
-          { text: "sticky", correct: false },
-        ],
-      },
-      {
-        question: "Welcher Wert der Eigenschaft 'position' positioniert ein Element basierend auf der Scroll-Position im Browser?",
-        answers: [
-          { text: "sticky", correct: true },
-          { text: "fixed", correct: false },
-          { text: "relative", correct: false },
-          { text: "absolute", correct: false },
-        ],
-      },
-      {
-        question: "Welche Eigenschaft wird verwendet, um die Anzeige eines Elements zu steuern?",
-        answers: [
-          { text: "display", correct: true },
-          { text: "visibility", correct: false },
-          { text: "show", correct: false },
-          { text: "hide", correct: false },
-        ],
-      },
-      {
-        question: "Welcher Wert der Eigenschaft 'display' versteckt ein Element, ohne es aus dem Dokumentfluss zu entfernen?",
-        answers: [
-          { text: "none", correct: true },
-          { text: "hidden", correct: false },
-          { text: "invisible", correct: false },
-          { text: "off", correct: false },
-        ],
-      },
-      {
-        question: "Welche Eigenschaft wird verwendet, um die Richtung des Flexbox-Layouts zu definieren?",
-        answers: [
-          { text: "flex-direction", correct: true },
-          { text: "direction-flex", correct: false },
-          { text: "flex-flow", correct: false },
-          { text: "flow-flex", correct: false },
-        ],
-      }
-    ],
-  };
-  
-
-const QUIZ = [htmlQuiz, cssQuiz];
+const QUIZ = [htmlQuiz, cssQuiz, jsQuiz];
 
 // DOM Elemente
 const startPage = document.getElementById("start-page");
