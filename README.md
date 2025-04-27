@@ -13,7 +13,7 @@ Gehostet automatisch über **GitHub Pages**!
 - **Direktes Feedback** nach dem Abschicken (grün = richtig, rot = falsch)
 - **Punkteberechnung** (+1 Punkt für richtig, -1 Punkt für falsch)
 - **Bestpunktzahl** wird für jedes Quiz lokal gespeichert (LocalStorage)
-- **Klares, modernes Design** (weiß, hellgrau, inspiriert von Apple)
+- **Klares, modernes Design** (weiß, hellgrau)
 - **Mobilfreundlich** (Responsive Design)
 
 ---
@@ -21,7 +21,7 @@ Gehostet automatisch über **GitHub Pages**!
 ## 📊 Technologien
 
 - HTML5
-- TailwindCSS (eingebunden über CDN)
+- TailwindCSS
 - Google Fonts (Schriftart "Manrope")
-- Vanilla JavaScript (kein Framework)
+- Vanilla JavaScript
 - Deployment über GitHub Actions und GitHub Pages
