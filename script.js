@@ -837,11 +837,289 @@ const jsQuiz = {
         { text: "Object.entries()", correct: false },
         { text: "Object.items()", correct: false },
       ],
-    }
+    },
   ],
 };
 
-const QUIZ = [htmlQuiz, cssQuiz, jsQuiz];
+const nodejsQuiz = {
+  title: "Quiz: Node.js",
+  availableDate: "2025-04-27",
+  questions: [
+    // Einfache Fragen
+    {
+      question: "Was ist Node.js?",
+      answers: [
+        { text: "Eine serverseitige JavaScript-Laufzeitumgebung", correct: true },
+        { text: "Eine Datenbanktechnologie", correct: false },
+        { text: "Eine Frontend-Bibliothek", correct: false },
+        { text: "Eine Desktop-Anwendungssoftware", correct: false },
+      ],
+    },
+    {
+      question: "Welche JavaScript-Engine wird von Node.js verwendet?",
+      answers: [
+        { text: "Google V8", correct: true },
+        { text: "SpiderMonkey", correct: false },
+        { text: "ChakraCore", correct: false },
+        { text: "JavaScriptCore", correct: false },
+      ],
+    },
+    {
+      question: "Welches Paketmanagement-Tool wird standardmäßig mit Node.js installiert?",
+      answers: [
+        { text: "npm (Node Package Manager)", correct: true },
+        { text: "Yarn", correct: false },
+        { text: "Bower", correct: false },
+        { text: "Composer", correct: false },
+      ],
+    },
+    {
+      question: "Welche Datei enthält die benötigten Packages eines Node.js-Projekts?",
+      answers: [
+        { text: "package.json", correct: true },
+        { text: "index.js", correct: false },
+        { text: "app.js", correct: false },
+        { text: "README.md", correct: false },
+      ],
+    },
+    {
+      question: "Welches Feld in der package.json-Datei gibt den Einstiegspunkt für ein Node.js-Modul an?",
+      answers: [
+        { text: "main", correct: true },
+        { text: "entry", correct: false },
+        { text: "start", correct: false },
+        { text: "root", correct: false },
+      ],
+    },
+    {
+      question: "Welchen Befehl verwendet man, um ein neues Node.js-Projekt zu initialisieren?",
+      answers: [
+        { text: "npm init", correct: true },
+        { text: "node init", correct: false },
+        { text: "npm create", correct: false },
+        { text: "node setup", correct: false },
+      ],
+    },
+    {
+      question: "Welchen Befehl verwendet man, um ein Paket in einem Node.js-Projekt zu installieren?",
+      answers: [
+        { text: "npm install <package-name>", correct: true },
+        { text: "node install <package-name>", correct: false },
+        { text: "npm add <package-name>", correct: false },
+        { text: "node add <package-name>", correct: false },
+      ],
+    },
+    {
+      question: "Welchen Befehl verwendet man, um ein Paket aus einem Node.js-Projekt zu deinstallieren?",
+      answers: [
+        { text: "npm uninstall <package-name>", correct: true },
+        { text: "node remove <package-name>", correct: false },
+        { text: "npm delete <package-name>", correct: false },
+        { text: "node uninstall <package-name>", correct: false },
+      ],
+    },
+    {
+      question: "Was ist Express.js?",
+      answers: [
+        { text: "Ein Framework für die Erstellung von Webservern in Node.js", correct: true },
+        { text: "Eine Datenbank für Node.js-Anwendungen", correct: false },
+        { text: "Ein Frontend-Framework", correct: false },
+        { text: "Ein Tool zur Codeformatierung", correct: false },
+      ],
+    },
+    {
+      question: "Welche HTTP-Methode wird verwendet, um ausschließlich Daten von einem Server abzurufen?",
+      answers: [
+        { text: "GET", correct: true },
+        { text: "POST", correct: false },
+        { text: "PUT", correct: false },
+        { text: "DELETE", correct: false },
+      ],
+    },
+    {
+      question: "Welche HTTP-Methode wird verwendet, um Daten an den Server zu senden?",
+      answers: [
+        { text: "POST", correct: true },
+        { text: "GET", correct: false },
+        { text: "PUT", correct: false },
+        { text: "DELETE", correct: false },
+      ],
+    },
+    {
+      question: "Welche HTTP-Methode wird verwendet, um Daten auf dem Server zu aktualisieren?",
+      answers: [
+        { text: "PUT", correct: true },
+        { text: "GET", correct: false },
+        { text: "POST", correct: false },
+        { text: "DELETE", correct: false },
+      ],
+    },
+    {
+      question: "Welche HTTP-Methode wird verwendet, um eine Ressource vom Server zu löschen?",
+      answers: [
+        { text: "DELETE", correct: true },
+        { text: "GET", correct: false },
+        { text: "POST", correct: false },
+        { text: "PUT", correct: false },
+      ],
+    },
+    {
+      question: "Welcher HTTP-Statuscode bedeutet, dass die Anfrage erfolgreich war und die angeforderten Daten zurückgegeben wurden?",
+      answers: [
+        { text: "200 OK", correct: true },
+        { text: "201 Created", correct: false },
+        { text: "204 No Content", correct: false },
+        { text: "206 Partial Content", correct: false },
+      ],
+    },
+    {
+      question: "Welcher HTTP-Statuscode bedeutet, dass die Anfrage ungültig oder schlecht formatiert war?",
+      answers: [
+        { text: "400 Bad Request", correct: true },
+        { text: "401 Unauthorized", correct: false },
+        { text: "403 Forbidden", correct: false },
+        { text: "404 Not Found", correct: false },
+      ],
+    },
+    {
+      question: "Welcher HTTP-Statuscode bedeutet, dass der Server vorübergehend nicht verfügbar ist?",
+      answers: [
+        { text: "503 Service Unavailable", correct: true },
+        { text: "500 Internal Server Error", correct: false },
+        { text: "501 Not Implemented", correct: false },
+        { text: "502 Bad Gateway", correct: false },
+      ],
+    },
+    {
+      question: "Welcher HTTP-Header gibt den Medientyp der Antwort an?",
+      answers: [
+        { text: "Content-Type", correct: true },
+        { text: "Set-Cookie", correct: false },
+        { text: "Cache-Control", correct: false },
+        { text: "Authorization", correct: false },
+      ],
+    },
+    {
+      question: "Was ist REST?",
+      answers: [
+        { text: "Ein Architekturstil für die Erstellung von Webservices", correct: true },
+        { text: "Ein Protokoll für die Datenübertragung", correct: false },
+        { text: "Ein Framework für die Erstellung von Webanwendungen", correct: false },
+        { text: "Ein Tool zur Codeformatierung", correct: false },
+      ],
+    },
+    {
+      question: "Wofür wird Nodemon verwendet?",
+      answers: [
+        { text: "Um den Server automatisch neu zu starten, wenn sich Quelldateien ändern", correct: true },
+        { text: "Um HTTP-Anfragen zu testen", correct: false },
+        { text: "Um Pakete zu installieren", correct: false },
+        { text: "Um die Leistung eines Servers zu überwachen", correct: false },
+      ],
+    },
+    {
+      question: "Welchen Befehl verwendet man, um einen Node.js-Server mit Nodemon zu starten?",
+      answers: [
+        { text: "nodemon server.js", correct: true },
+        { text: "node server.js", correct: false },
+        { text: "npm start", correct: false },
+        { text: "npm run server", correct: false },
+      ],
+    },
+    {
+      question: "Was ist der Zweck von Query Parametern in Express.js?",
+      answers: [
+        { text: "Zusätzliche Informationen, die an die URL einer Anfrage angehängt werden", correct: true },
+        { text: "Daten, die im Body einer POST-Anfrage gesendet werden", correct: false },
+        { text: "Header-Informationen, die in der Anfrage gesendet werden", correct: false },
+        { text: "Cookies, die im Browser gespeichert werden", correct: false },
+      ],
+    },
+    {
+      question: "Welcher HTTP-Statuscode bedeutet, dass die Anfrage akzeptiert wurde, aber die Verarbeitung noch nicht abgeschlossen ist?",
+      answers: [
+        { text: "202 Accepted", correct: true },
+        { text: "200 OK", correct: false },
+        { text: "201 Created", correct: false },
+        { text: "204 No Content", correct: false },
+      ],
+    },
+    {
+      question: "Welcher HTTP-Statuscode bedeutet, dass der Client keine Berechtigung hat, auf die angeforderte Ressource zuzugreifen?",
+      answers: [
+        { text: "403 Forbidden", correct: true },
+        { text: "401 Unauthorized", correct: false },
+        { text: "404 Not Found", correct: false },
+        { text: "400 Bad Request", correct: false },
+      ],
+    },
+    {
+      question: "Welcher HTTP-Statuscode bedeutet, dass die angeforderte HTTP-Methode für die angeforderte Ressource nicht erlaubt ist?",
+      answers: [
+        { text: "405 Method Not Allowed", correct: true },
+        { text: "400 Bad Request", correct: false },
+        { text: "401 Unauthorized", correct: false },
+        { text: "403 Forbidden", correct: false },
+      ],
+    },
+    {
+      question: "Welcher HTTP-Statuscode bedeutet, dass der Server die angeforderte Methode nicht unterstützt?",
+      answers: [
+        { text: "501 Not Implemented", correct: true },
+        { text: "500 Internal Server Error", correct: false },
+        { text: "502 Bad Gateway", correct: false },
+        { text: "503 Service Unavailable", correct: false },
+      ],
+    },
+    {
+      question: "Welcher HTTP-Statuscode bedeutet, dass der Server bei der Kommunikation mit einem anderen Server eine Zeitüberschreitung erfahren hat?",
+      answers: [
+        { text: "504 Gateway Timeout", correct: true },
+        { text: "500 Internal Server Error", correct: false },
+        { text: "501 Not Implemented", correct: false },
+        { text: "502 Bad Gateway", correct: false },
+      ],
+    },
+    {
+      question: "Welcher Befehl wird verwendet, um ein Node.js-Skript auszuführen?",
+      answers: [
+        { text: "node <script-name>.js", correct: true },
+        { text: "run <script-name>.js", correct: false },
+        { text: "execute <script-name>.js", correct: false },
+        { text: "start <script-name>.js", correct: false },
+      ],
+    },
+    {
+      question: "Welcher Befehl wird verwendet, um die installierten Pakete in einem Node.js-Projekt zu aktualisieren?",
+      answers: [
+        { text: "npm update", correct: true },
+        { text: "npm refresh", correct: false },
+        { text: "npm upgrade", correct: false },
+        { text: "npm sync", correct: false },
+      ],
+    },
+    {
+      question: "Welches Modul kann in Node.js verwendet werden, um mit dem Dateisystem zu interagieren?",
+      answers: [
+        { text: "fs", correct: true },
+        { text: "filesys", correct: false },
+        { text: "io-fsp", correct: false },
+        { text: "disk-util", correct: false },
+      ],
+    },
+    {
+      question: "Welcher Befehl wird verwendet, um die Version von Node.js und npm zu überprüfen?",
+      answers: [
+        { text: "node -v und npm -v", correct: true },
+        { text: "node --version und npm --version", correct: false },
+        { text: "node version und npm version", correct: false },
+        { text: "node check und npm check", correct: false },
+      ],
+    },
+  ],
+};
+
+const QUIZ = [htmlQuiz, cssQuiz, jsQuiz, nodejsQuiz];
 
 // DOM Elemente
 const startPage = document.getElementById("start-page");
@@ -864,27 +1142,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Quizliste rendern
 function renderQuizList() {
-    quizList.innerHTML = "";
-    QUIZ.forEach((quiz, index) => {
-        const bestKey = `quiz_${quiz.title}_best`;
-        const bestScore = localStorage.getItem(bestKey);
-        const item = document.createElement("li");
-        item.className = "bg-white p-4 rounded-xl shadow hover:bg-gray-50 cursor-pointer flex justify-between items-center";
+  quizList.innerHTML = "";
+  QUIZ.forEach((quiz, index) => {
+    const bestKey = `quiz_${quiz.title}_best`;
+    const bestScore = localStorage.getItem(bestKey);
+    const item = document.createElement("li");
+    item.className = "bg-white p-4 rounded-xl shadow hover:bg-gray-50 cursor-pointer flex justify-between items-center";
 
-        // Always show title
-        let inner = `<span>${quiz.title}</span>`;
+    // Always show title
+    let inner = `<span>${quiz.title}</span>`;
 
-        // Only show best score if it exists in localStorage
-        if (bestScore !== null) {
-            inner += `<div class="text-sm text-white px-2 py-1 rounded-full bg-blue-700">
+    // Only show best score if it exists in localStorage
+    if (bestScore !== null) {
+      inner += `<div class="text-sm text-white px-2 py-1 rounded-full bg-blue-700">
                                     Best: ${bestScore} Punkte
                                 </div>`;
-        }
+    }
 
-        item.innerHTML = inner;
-        item.addEventListener("click", () => startQuiz(index));
-        quizList.appendChild(item);
-    });
+    item.innerHTML = inner;
+    item.addEventListener("click", () => startQuiz(index));
+    quizList.appendChild(item);
+  });
 }
 
 // Quiz starten
@@ -978,10 +1256,12 @@ submitButton.addEventListener("click", () => {
 
 // Zurück zur Startseite
 function returnToStart() {
-  quizPage.classList.add("hidden");
-  startPage.classList.remove("hidden");
-  resultDiv.textContent = "";
-  renderQuizList();
+  if (confirm("Warnung: Ihre Antworten werden nicht gespeichert. Möchten Sie wirklich zurück zur Startseite?")) {
+    quizPage.classList.add("hidden");
+    startPage.classList.remove("hidden");
+    resultDiv.textContent = "";
+    renderQuizList();
+  }
 }
 
 // Event Listener für die Buttons
