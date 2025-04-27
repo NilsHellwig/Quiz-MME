@@ -643,9 +643,9 @@ const jsQuiz = {
     {
       question: "Welches Schlüsselwort wird verwendet, um eine Variable in JavaScript zu deklarieren?",
       answers: [
-        { text: "var", correct: true },
-        { text: "let", correct: false },
-        { text: "const", correct: false },
+        { text: "let", correct: true },
+        { text: "def", correct: false },
+        { text: "call", correct: false },
         { text: "declare", correct: false },
       ],
     },
@@ -661,8 +661,8 @@ const jsQuiz = {
     {
       question: "Was passiert, wenn eine Variable mit 'let' deklariert wird, aber kein Wert zugewiesen wird?",
       answers: [
-        { text: "Es wird ein Fehler generiert", correct: true },
-        { text: "Die Variable erhält den Wert 'undefined'", correct: false },
+        { text: "Es wird ein Fehler generiert", correct: false },
+        { text: "Die Variable erhält den Wert 'undefined'", correct: true },
         { text: "Die Variable wird auf null gesetzt", correct: false },
         { text: "Die Variable wird ignoriert", correct: false },
       ],
@@ -707,7 +707,7 @@ const jsQuiz = {
       question: "Welcher Operator wird verwendet, um einen Wert in JavaScript zu inkrementieren?",
       answers: [
         { text: "++", correct: true },
-        { text: "--", correct: false },
+        { text: "- -", correct: false },
         { text: "+=", correct: false },
         { text: "-=", correct: false },
       ],
@@ -716,7 +716,7 @@ const jsQuiz = {
       question: "Welcher Operator wird verwendet, um einen Wert in JavaScript zu dekrementieren?",
       answers: [
         { text: "++", correct: false },
-        { text: "--", correct: true },
+        { text: "- -", correct: true },
         { text: "+=", correct: false },
         { text: "-=", correct: false },
       ],
