@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MME Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="script.js"></script>
+    <style>
+      body {
+        font-family: "Manrope", sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col items-center p-6">
+    <!-- Startseite -->
+    <div id="start-page" class="w-full max-w-2xl text-center">
+        <h1 class="text-4xl font-bold mb-2">MME Quiz</h1>
+        <p class="text-gray-600 mb-4">
+            Wählen Sie ein Quiz aus und beantworten Sie die Fragen direkt hier im Browser. 
+            Es werden keine Antworten an externe Server gesendet – alles läuft lokal auf Ihrem Gerät.
+        </p>
+        <ul id="quiz-list" class="space-y-4 mt-8"></ul>
+    </div>
+
+    <!-- Quizseite -->
+    <div id="quiz-page" class="w-full max-w-2xl hidden">
+      <div class="flex justify-between items-center mb-6">
+        <button id="back-button" class="flex items-center space-x-2 text-blue-500 bg-white border border-blue-500 px-4 py-2 rounded hover:bg-blue-50 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span>Zurück</span>
+        </button>
+        <h2 id="quiz-title" class="text-2xl font-semibold"></h2>
+      </div>
+      <div id="quiz-container" class="space-y-6"></div>
+      <div class="flex flex-col items-center space-y-4 mt-6">
+        <button id="submit-button" class="bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-600 transition">Abschicken</button>
+        <button id="back-to-start-button" class="bg-green-500 text-white py-2 px-6 rounded hover:bg-green-600 hidden transition">Zurück zu allen Quiz</button>
+      </div>
+      <div id="result" class="mt-6 text-center text-lg font-bold"></div>
+    </div>
+  </body>
+</html>
