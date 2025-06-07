@@ -1119,7 +1119,212 @@ const nodejsQuiz = {
   ],
 };
 
-const QUIZ = [htmlQuiz, cssQuiz, jsQuiz, nodejsQuiz];
+const dockerQuiz = {
+  title: "Quiz: Docker",
+  availableDate: "2025-04-27",
+  questions: [
+    {
+      question: "Was ist ein Docker-Container?",
+      answers: [
+        { text: "Eine virtuelle Maschine", correct: false },
+        { text: "Eine laufende Instanz eines Docker-Images", correct: true },
+        { text: "Ein Quellcode-Editor", correct: false },
+        { text: "Ein Betriebssystem", correct: false },
+      ],
+    },
+    {
+      question: "Was beschreibt ein Docker-Image?",
+      answers: [
+        { text: "Einen laufenden Prozess", correct: false },
+        { text: "Die Struktur und Inhalte eines Containers", correct: true },
+        { text: "Einen Screenshot der Anwendung", correct: false },
+        { text: "Einen Netzwerk-Port", correct: false },
+      ],
+    },
+    {
+      question: "Was ist Docker Hub?",
+      answers: [
+        { text: "Ein Hardware-Switch", correct: false },
+        { text: "Ein lokaler Docker-Client", correct: false },
+        { text: "Ein Online-Repository für Docker-Images", correct: true },
+        { text: "Ein Editor für Dockerfiles", correct: false },
+      ],
+    },
+    {
+      question: "Was macht der Befehl `docker run -d`?",
+      answers: [
+        { text: "Startet den Container interaktiv", correct: false },
+        { text: "Beendet den Container", correct: false },
+        { text: "Startet den Container im Hintergrund", correct: true },
+        { text: "Löscht das Image", correct: false },
+      ],
+    },
+    {
+      question: "Wofür steht der Parameter `-p 8080:80`?",
+      answers: [
+        { text: "Öffnet Port 8080 im Container", correct: false },
+        { text: "Forwardet Host-Port 8080 auf Container-Port 80", correct: true },
+        { text: "Blockiert den Zugriff auf Port 80", correct: false },
+        { text: "Verbindet zwei Container", correct: false },
+      ],
+    },
+    {
+      question: "Was ist ein Dockerfile?",
+      answers: [
+        { text: "Eine YAML-Datei", correct: false },
+        { text: "Ein Skript zur Orchestrierung", correct: false },
+        { text: "Eine Textdatei, die ein Docker-Image beschreibt", correct: true },
+        { text: "Ein Backup eines Containers", correct: false },
+      ],
+    },
+    {
+      question: "Welche Anweisung im Dockerfile definiert das Basis-Image?",
+      answers: [
+        { text: "CMD", correct: false },
+        { text: "FROM", correct: true },
+        { text: "RUN", correct: false },
+        { text: "COPY", correct: false },
+      ],
+    },
+    {
+      question: "Was passiert bei jeder Anweisung im Dockerfile?",
+      answers: [
+        { text: "Eine neue Schicht wird erzeugt", correct: true },
+        { text: "Der Container wird gestartet", correct: false },
+        { text: "Der Host wird neugestartet", correct: false },
+        { text: "Der Docker-Daemon wird beendet", correct: false },
+      ],
+    },
+    {
+      question: "Welche Datei wird typischerweise für docker-compose verwendet?",
+      answers: [
+        { text: "compose.json", correct: false },
+        { text: "docker-compose.yaml", correct: true },
+        { text: "dockerfile-compose", correct: false },
+        { text: "compose.config", correct: false },
+      ],
+    },
+    {
+      question: "Welche Anwendung muss unter Windows/Mac gestartet sein, um Docker zu verwenden?",
+      answers: [
+        { text: "Docker Compose", correct: false },
+        { text: "Docker Desktop", correct: true },
+        { text: "Docker UI", correct: false },
+        { text: "Dockerfile", correct: false },
+      ],
+    },
+    {
+      question: "Wie nennt man das Prinzip 'Write once, run anywhere' in Bezug auf Docker?",
+      answers: [
+        { text: "Virtualisierung", correct: false },
+        { text: "Plattformunabhängigkeit", correct: true },
+        { text: "Code-Sharing", correct: false },
+        { text: "Microservices", correct: false },
+      ],
+    },
+    {
+      question: "Wofür steht CMD im Dockerfile?",
+      answers: [
+        { text: "Befehl zur Image-Erstellung", correct: false },
+        { text: "Standardkommando beim Containerstart", correct: true },
+        { text: "Kommentarzeile", correct: false },
+        { text: "Debug-Modus", correct: false },
+      ],
+    },
+    {
+      question: "Was beschreibt ein Layer im Dockerfile?",
+      answers: [
+        { text: "Eine Benutzerrolle", correct: false },
+        { text: "Ein Schritt beim Image-Aufbau", correct: true },
+        { text: "Eine Netzwerkschnittstelle", correct: false },
+        { text: "Ein Plugin", correct: false },
+      ],
+    },
+    {
+      question: "Wozu dient der Befehl `COPY . .` im Dockerfile?",
+      answers: [
+        { text: "Er kopiert die Daten vom Container in den Host", correct: false },
+        { text: "Er kopiert alle Dateien vom Build-Kontext ins Image", correct: true },
+        { text: "Er synchronisiert Git-Repositories", correct: false },
+        { text: "Er löscht temporäre Dateien", correct: false },
+      ],
+    },
+    {
+      question: "Was kann zu einem langsamen Build führen?",
+      answers: [
+        { text: "Zu viele Volumes", correct: false },
+        { text: "COPY . . vor npm install", correct: true },
+        { text: "Mehrere RUN-Kommandos", correct: false },
+        { text: "CMD statt RUN verwenden", correct: false },
+      ],
+    },
+    {
+      question: "Was ist ein typischer Vorteil von docker-compose?",
+      answers: [
+        { text: "Es unterstützt virtuelle Maschinen", correct: false },
+        { text: "Es erlaubt mehrere Container gleichzeitig zu starten", correct: true },
+        { text: "Es ist schneller als ein Dockerfile", correct: false },
+        { text: "Es ersetzt Docker vollständig", correct: false },
+      ],
+    },
+    {
+      question: "Welche Anweisung wird NICHT im Dockerfile verwendet?",
+      answers: [
+        { text: "FROM", correct: false },
+        { text: "RUN", correct: false },
+        { text: "DO", correct: true },
+        { text: "CMD", correct: false },
+      ],
+    },
+    {
+      question: "Was macht `docker ps -a`?",
+      answers: [
+        { text: "Zeigt nur laufende Container", correct: false },
+        { text: "Zeigt alle Container, auch gestoppte", correct: true },
+        { text: "Listet nur Images auf", correct: false },
+        { text: "Startet alle Container", correct: false },
+      ],
+    },
+    {
+      question: "Was ist keine gültige Image-Quelle im FROM-Befehl?",
+      answers: [
+        { text: "ubuntu:20.04", correct: false },
+        { text: "node:14", correct: false },
+        { text: "compose:latest", correct: true },
+        { text: "alpine", correct: false },
+      ],
+    },
+    {
+      question: "Wie benennt man einen Container beim Start?",
+      answers: [
+        { text: "--tag", correct: false },
+        { text: "--name", correct: true },
+        { text: "--id", correct: false },
+        { text: "--image", correct: false },
+      ],
+    },
+    {
+      question: "Wie kann man ein eigenes Image öffentlich bereitstellen?",
+      answers: [
+        { text: "In GitHub hochladen", correct: false },
+        { text: "Im Dockerfile speichern", correct: false },
+        { text: "Auf Docker Hub pushen", correct: true },
+        { text: "Mit docker run exportieren", correct: false },
+      ],
+    },
+    {
+      question: "Was beschreibt der Image-Tag?",
+      answers: [
+        { text: "Die Portfreigabe", correct: false },
+        { text: "Die Image-Version", correct: true },
+        { text: "Den Speicherort", correct: false },
+        { text: "Die Netzwerkgruppe", correct: false },
+      ],
+    }
+  ],
+};
+
+const QUIZ = [htmlQuiz, cssQuiz, jsQuiz, nodejsQuiz, dockerQuiz];
 
 // DOM Elemente
 const startPage = document.getElementById("start-page");
@@ -1142,29 +1347,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Quizliste rendern
 function renderQuizList() {
-    quizList.innerHTML = "";
-    QUIZ.forEach((quiz, index) => {
-        const bestKey = `quiz_${quiz.title}_best`;
-        const bestScore = localStorage.getItem(bestKey);
-        const item = document.createElement("li");
-        item.className = "bg-white p-4 rounded-xl shadow hover:bg-gray-50 cursor-pointer flex justify-between items-center";
+  quizList.innerHTML = "";
+  QUIZ.forEach((quiz, index) => {
+    const bestKey = `quiz_${quiz.title}_best`;
+    const bestScore = localStorage.getItem(bestKey);
+    const item = document.createElement("li");
+    item.className = "bg-white p-4 rounded-xl shadow hover:bg-gray-50 cursor-pointer flex justify-between items-center";
 
-        // Always show title
-        let inner = `<span>${quiz.title}</span>`;
+    // Always show title
+    let inner = `<span>${quiz.title}</span>`;
 
-        // Only show best score if it exists in localStorage
-        if (bestScore !== null) {
-            inner += `
+    // Only show best score if it exists in localStorage
+    if (bestScore !== null) {
+      inner += `
                 <div class="text-sm text-white px-2 py-1 rounded-full bg-blue-700">
                     Best: ${bestScore} / ${quiz.questions.length} Punkte
                 </div>
             `;
-        }
+    }
 
-        item.innerHTML = inner;
-        item.addEventListener("click", () => startQuiz(index));
-        quizList.appendChild(item);
-    });
+    item.innerHTML = inner;
+    item.addEventListener("click", () => startQuiz(index));
+    quizList.appendChild(item);
+  });
 }
 
 // Quiz starten
