@@ -1320,11 +1320,235 @@ const dockerQuiz = {
         { text: "Den Speicherort", correct: false },
         { text: "Die Netzwerkgruppe", correct: false },
       ],
-    }
+    },
   ],
 };
 
-const QUIZ = [htmlQuiz, cssQuiz, jsQuiz, nodejsQuiz, dockerQuiz];
+const mongoQuiz = {
+  title: "Quiz: NoSQL & MongoDB",
+  availableDate: "2025-04-27",
+  questions: [
+    {
+      question: "Wofür steht NoSQL?",
+      answers: [
+        { text: "Not One SQL", correct: false },
+        { text: "Not Only SQL", correct: true },
+        { text: "No Standard Query Language", correct: false },
+        { text: "Neue SQL-Sprache", correct: false },
+      ],
+    },
+    {
+      question: "Welche Eigenschaft trifft auf NoSQL-Datenbanken zu?",
+      answers: [
+        { text: "Tabellenbasiert", correct: false },
+        { text: "Schemalos", correct: true },
+        { text: "Nur für relationale Daten geeignet", correct: false },
+        { text: "Nur in Java verwendbar", correct: false },
+      ],
+    },
+    {
+      question: "Welche der folgenden Datenbanken ist dokumentenorientiert?",
+      answers: [
+        { text: "Redis", correct: false },
+        { text: "MongoDB", correct: true },
+        { text: "Neo4j", correct: false },
+        { text: "MySQL", correct: false },
+      ],
+    },
+    {
+      question: "Welche Struktur verwendet MongoDB zum Speichern von Daten?",
+      answers: [
+        { text: "CSV", correct: false },
+        { text: "XML", correct: false },
+        { text: "BSON", correct: true },
+        { text: "YAML", correct: false },
+      ],
+    },
+    {
+      question: "Was ist eine Collection in MongoDB?",
+      answers: [
+        { text: "Ein Datensatz", correct: false },
+        { text: "Eine Datei", correct: false },
+        { text: "Ein Äquivalent zu einer Tabelle", correct: true },
+        { text: "Ein Server", correct: false },
+      ],
+    },
+    {
+      question: "Was ist der Zweck des Feldes _id in MongoDB?",
+      answers: [
+        { text: "Ein Benutzername", correct: false },
+        { text: "Ein automatisch generierter Primärschlüssel", correct: true },
+        { text: "Ein Attribut für Indexnamen", correct: false },
+        { text: "Ein Feld für Metadaten", correct: false },
+      ],
+    },
+    {
+      question: "Was ist `mongosh`?",
+      answers: [
+        { text: "Ein Mongoose-Plugin", correct: false },
+        { text: "Ein MongoDB-GUI-Tool", correct: false },
+        { text: "Die interaktive MongoDB-Shell", correct: true },
+        { text: "Ein MongoDB-Server", correct: false },
+      ],
+    },
+    {
+      question: "Was macht `show collections` in der MongoDB-Shell?",
+      answers: [
+        { text: "Zeigt alle Datenbanken", correct: false },
+        { text: "Zeigt alle Collections der aktuellen DB", correct: true },
+        { text: "Zeigt die Shell-Version", correct: false },
+        { text: "Zeigt alle Indexe", correct: false },
+      ],
+    },
+    {
+      question: "Wie erstellt man ein Dokument in MongoDB?",
+      answers: [
+        { text: "INSERT INTO", correct: false },
+        { text: "db.collection.add()", correct: false },
+        { text: "db.collection.insertOne()", correct: true },
+        { text: "db.collection.create()", correct: false },
+      ],
+    },
+    {
+      question: "Was bewirkt `use myDatabase`?",
+      answers: [
+        { text: "Löscht eine Datenbank", correct: false },
+        { text: "Wechselt oder erstellt die Datenbank", correct: true },
+        { text: "Erstellt ein Dokument", correct: false },
+        { text: "Zeigt alle Benutzer", correct: false },
+      ],
+    },
+    {
+      question: "Wie wird in der MongoDB-Shell ein Dokument mit einer Bedingung abgefragt?",
+      answers: [
+        { text: "db.collection.filter({ age > 25 })", correct: false },
+        { text: "db.collection.query({ age: > 25 })", correct: false },
+        { text: "db.collection.find({ age: { $gt: 25 } })", correct: true },
+        { text: "db.collection.select({ age > 25 })", correct: false },
+      ],
+    },
+    {
+      question: "Wie aktualisiert man ein Dokument in MongoDB?",
+      answers: [
+        { text: "db.collection.modifyOne()", correct: false },
+        { text: "db.collection.updateOne({ name: 'John' }, { $set: { age: 31 } })", correct: true },
+        { text: "db.collection.editOne()", correct: false },
+        { text: "db.collection.set({ age: 31 })", correct: false },
+      ],
+    },
+    {
+      question: "Wie löscht man ein Dokument aus einer Collection?",
+      answers: [
+        { text: "db.collection.remove()", correct: false },
+        { text: "db.collection.deleteOne({ name: 'John' })", correct: true },
+        { text: "db.collection.clear({ name: 'John' })", correct: false },
+        { text: "db.collection.drop({ name: 'John' })", correct: false },
+      ],
+    },
+    {
+      question:
+        "(Optional:) Unter https://www.mongodb.com/docs/manual/tutorial/manage-users-and-roles/ finden Sie weitere Informationen zum Thema User-Management in MongoDB. Wie erstellt man einen Benutzer in MongoDB?",
+      answers: [
+        { text: "db.addUser(...)", correct: false },
+        { text: "db.createUser({ user: 'myUser', pwd: 'pass', roles: [...] })", correct: true },
+        { text: "db.newUser(...)", correct: false },
+        { text: "db.registerUser(...)", correct: false },
+      ],
+    },
+    {
+      question: "Was ist ein Mongoose-Modell?",
+      answers: [
+        { text: "Ein Index auf ein Feld", correct: false },
+        { text: "Ein Interface zur Collection auf Basis eines Schemas", correct: true },
+        { text: "Ein Benutzerprofil", correct: false },
+        { text: "Eine Verbindung zur Datenbank", correct: false },
+      ],
+    },
+    {
+      question: "Welche Funktion hat ein Mongoose-Schema?",
+      answers: [
+        { text: "Es erstellt die Datenbank", correct: false },
+        { text: "Es definiert die Struktur und Validierung von Dokumenten", correct: true },
+        { text: "Es speichert Benutzerrechte", correct: false },
+        { text: "Es verbindet das Backend mit der MongoDB", correct: false },
+      ],
+    },
+    {
+      question: "Welche Option in einem Mongoose-Schema macht ein Feld erforderlich?",
+      answers: [
+        { text: "optional: false", correct: false },
+        { text: "required: true", correct: true },
+        { text: "mustHave: true", correct: false },
+        { text: "present: true", correct: false },
+      ],
+    },
+    {
+      question: "Wie wird ein JWT typischerweise übermittelt?",
+      answers: [
+        { text: "In der URL", correct: false },
+        { text: "Als Cookie", correct: false },
+        { text: "Im HTTP-Header", correct: true },
+        { text: "In der Datenbank", correct: false },
+      ],
+    },
+    {
+      question: "Welche drei Bestandteile hat ein JWT?",
+      answers: [
+        { text: "Header, Token, ID", correct: false },
+        { text: "Header, Payload, Signature", correct: true },
+        { text: "Request, Payload, Secret", correct: false },
+        { text: "Header, Data, Key", correct: false },
+      ],
+    },
+    {
+      question: "Welche Information enthält der JWT Header?",
+      answers: [
+        { text: "Benutzer-ID", correct: false },
+        { text: "Verwendeter Algorithmus und Typ", correct: true },
+        { text: "Token-Ablaufzeit", correct: false },
+        { text: "Datenbankinformationen", correct: false },
+      ],
+    },
+    {
+      question: "Warum wird ein SECRET_KEY für JWT benötigt?",
+      answers: [
+        { text: "Um den Token lesbar zu machen", correct: false },
+        { text: "Um die Datenbank zu schützen", correct: false },
+        { text: "Zur Signierung und Überprüfung des Tokens", correct: true },
+        { text: "Zum Speichern von Passwörtern", correct: false },
+      ],
+    },
+    {
+      question: "Wo sollte der SECRET_KEY gespeichert werden?",
+      answers: [
+        { text: "Im GitHub Repository", correct: false },
+        { text: "Im HTML-Quelltext", correct: false },
+        { text: "In einer .env-Datei", correct: true },
+        { text: "Im JWT selbst", correct: false },
+      ],
+    },
+    {
+      question: "Warum sollte eine .env-Datei nicht im eigenen Repository legen?",
+      answers: [
+        { text: "Sie verlangsamt den Server", correct: false },
+        { text: "Sie enthält sensible Konfigurationsdaten", correct: true },
+        { text: "Sie ist schwer zu lesen", correct: false },
+        { text: "Sie wird automatisch gelöscht", correct: false },
+      ],
+    },
+    {
+      question: "Welche Bibliothek kann verwendet werden um .env-Dateien in Node.js?",
+      answers: [
+        { text: "config.js", correct: false },
+        { text: "dotenv", correct: true },
+        { text: "envify", correct: false },
+        { text: "nodevars", correct: false },
+      ],
+    },
+  ],
+};
+
+const QUIZ = [htmlQuiz, cssQuiz, jsQuiz, nodejsQuiz, dockerQuiz, mongoQuiz];
 
 // DOM Elemente
 const startPage = document.getElementById("start-page");
